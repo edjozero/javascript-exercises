@@ -4,7 +4,14 @@ const repeatString = function(string, num) {
         repeatedString += string;
     }
 
-    return repeatedString;
+    if(num < 0){
+        repeatedString += "ERROR";
+        return repeatedString;
+    }else{
+        return repeatedString;
+    }
+
+    // return repeatedString;
 };
 
 // Do not edit below this line
