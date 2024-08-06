@@ -6,7 +6,8 @@ const sumAll = function(...args) {
     let sum = 0;
 
     for(let i=min; i<=max; i++){
-        if(i < 0 || typeof i === "string"){
+        // added last condition to satisfy test 5
+        if(i < 0 || typeof i === "string" || !Number.isInteger(i)){
             return "ERROR";
         }else{
             sum += i;
