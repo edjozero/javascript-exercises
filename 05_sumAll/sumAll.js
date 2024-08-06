@@ -1,8 +1,10 @@
-const sumAll = function(min, max) {
-    // the following worked to satisfy test 1
+const sumAll = function(...args) {
+    // added variables for max, min and used spread operator for arguments
+    let max = Math.max(args[0], args[1]);
+    let min = Math.min(args[0], args[1]);
+
     let sum = 0;
 
-    // the condition in if statement is for some of remaining tests
     for(let i=min; i<=max; i++){
         if(i < 0 || typeof i === "string"){
             return "ERROR";
@@ -10,6 +12,8 @@ const sumAll = function(min, max) {
             sum += i;
         }
     }
+
+
 
     return sum;
 };
