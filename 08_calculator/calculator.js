@@ -12,8 +12,10 @@ const sum = function(args) {
   return sum;
 };
 
-const multiply = function() {
-
+const multiply = function(args) {
+  let sum = 1;
+  args.forEach(el => sum *= el);
+  return sum;
 };
 
 const power = function() {
