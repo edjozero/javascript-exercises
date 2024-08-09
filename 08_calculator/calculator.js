@@ -1,13 +1,15 @@
-const add = function(...args) {
-	return args[0] + args[1];
+const add = function(a,b) {
+	return a + b;
 };
 
-const subtract = function(...args) {
-	return args[0] - args[1];
+const subtract = function(a, b) {
+	return a - b;
 };
 
-const sum = function() {
-	
+const sum = function(args) {
+	let sum = 0;
+  args.forEach(el => sum += el);
+  return sum;
 };
 
 const multiply = function() {
